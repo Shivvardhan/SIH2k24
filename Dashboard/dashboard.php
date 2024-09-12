@@ -2,33 +2,7 @@
 
 <body>
     <div class="wrapper">
-        <div class="sidebar" data-background-color="white" data-active-color="danger">
-            <div class="sidebar-wrapper">
-                <div class="logo" style="margin:0;padding:5px;">
-                    <a href="dashboardbbcc.html"> <img src="./assets/img/logo.png" alt="Logo" width="240px"> </a>
-                </div>
-                <ul class="nav">
-                    <li class="active">
-                        <a href="dashboardbbcc.html">
-                            <i class="ti-panel"></i>
-                            <p>Dashboard</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="user.html">
-                            <i class="ti-user"></i>
-                            <p>User Profile</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="table.html">
-                            <i class="ti-view-list-alt"></i>
-                            <p>Table List</p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        <?php require './component/nav.php';?>
         <div class="main-panel">
             <nav class="navbar navbar-default">
                 <div class="container-fluid">
@@ -43,47 +17,22 @@
                     </div>
                 </div>
             </nav>
-            <div class="content">
+            <div class="content" style="padding-bottom:0;">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-lg-3 col-sm-6">
+                        <div class="col-lg-3 col-sm-6" style="padding-left:0px;padding-right:10px;">
                             <div class="card">
                                 <div class="content">
                                     <div class="row">
-                                        <div class="col-xs-5">
+                                        <div class="col-xs-3">
                                             <div class="icon-big icon-warning text-center">
-                                                <i class="ti-server"></i>
+                                                <i class="ti-user"></i>
                                             </div>
                                         </div>
-                                        <div class="col-xs-7">
+                                        <div class="col-xs-9">
                                             <div class="numbers">
-                                                <p>Capacity</p>
-                                                105GB
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="footer">
-                                        <hr />
-                                        <div class="stats">
-                                            <i class="ti-reload"></i> Updated now
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6">
-                            <div class="card">
-                                <div class="content">
-                                    <div class="row">
-                                        <div class="col-xs-5">
-                                            <div class="icon-big icon-success text-center">
-                                                <i class="ti-wallet"></i>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-7">
-                                            <div class="numbers">
-                                                <p>Revenue</p>
-                                                $1,345
+                                                <p>Total Selected Experts</p>
+                                                05
                                             </div>
                                         </div>
                                     </div>
@@ -96,18 +45,43 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-sm-6">
+                        <div class="col-lg-3 col-sm-6" style="padding:0 10px;">
                             <div class="card">
                                 <div class="content">
                                     <div class="row">
-                                        <div class="col-xs-5">
-                                            <div class="icon-big icon-danger text-center">
-                                                <i class="ti-pulse"></i>
+                                        <div class="col-xs-3">
+                                            <div class="icon-big icon-success text-center">
+                                                <i class="ti-briefcase"></i>
                                             </div>
                                         </div>
-                                        <div class="col-xs-7">
+                                        <div class="col-xs-9">
                                             <div class="numbers">
-                                                <p>Errors</p>
+                                                <p>Total Interviews</p>
+                                                15
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="footer">
+                                        <hr />
+                                        <div class="stats">
+                                            <i class="ti-calendar"></i> Last day
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6" style="padding:0 10px;">
+                            <div class="card">
+                                <div class="content">
+                                    <div class="row">
+                                        <div class="col-xs-3">
+                                            <div class="icon-big icon-danger text-center">
+                                                <i class="ti-comment-alt"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-9">
+                                            <div class="numbers">
+                                                <p>Total Feedbacks</p>
                                                 23
                                             </div>
                                         </div>
@@ -121,19 +95,19 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-sm-6">
+                        <div class="col-lg-3 col-sm-6" style="padding-left:10px;padding-right:0px;">
                             <div class="card">
                                 <div class="content">
                                     <div class="row">
-                                        <div class="col-xs-5">
+                                        <div class="col-xs-3">
                                             <div class="icon-big icon-info text-center">
-                                                <i class="ti-twitter-alt"></i>
+                                                <i class="ti-id-badge"></i>
                                             </div>
                                         </div>
-                                        <div class="col-xs-7">
+                                        <div class="col-xs-9">
                                             <div class="numbers">
-                                                <p>Followers</p>
-                                                +45
+                                                <p>Available Experts</p>
+                                                4
                                             </div>
                                         </div>
                                     </div>
@@ -148,26 +122,79 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <footer class="footer">
-                <div class="container-fluid">
-                    <nav class="pull-left">
-                        <ul>
-                            <li>
-                                <a href="#"> Shankar Travels </a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <div class="copyright pull-right">
-                        &copy;
-                        <script>
-                        document.write(new Date().getFullYear());
-                        </script>
-                        , powered by
-                        <a href="#">Shankar Travels</a>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Users Behavior</h4>
+                                <p class="category">24 Hours performance</p>
+                            </div>
+                            <div class="content">
+                                <div id="chartHours" class="ct-chart"></div>
+                                <div class="footer">
+                                    <div class="chart-legend">
+                                        <i class="fa fa-circle text-info"></i> Open
+                                        <i class="fa fa-circle text-danger"></i> Click
+                                        <i class="fa fa-circle text-warning"></i> Click Second Time
+                                    </div>
+                                    <hr>
+                                    <div class="stats">
+                                        <i class="ti-reload"></i> Updated 3 minutes ago
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </footer>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Email Statistics</h4>
+                                <p class="category">Last Campaign Performance</p>
+                            </div>
+                            <div class="content">
+                                <div id="chartPreferences" class="ct-chart ct-perfect-fourth"></div>
+                                <div class="footer">
+                                    <div class="chart-legend">
+                                        <i class="fa fa-circle text-info"></i> Open
+                                        <i class="fa fa-circle text-danger"></i> Bounce
+                                        <i class="fa fa-circle text-warning"></i> Unsubscribe
+                                    </div>
+                                    <hr>
+                                    <div class="stats">
+                                        <i class="ti-timer"></i> Campaign sent 2 days ago
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">2015 Sales</h4>
+                                <p class="category">All products including Taxes</p>
+                            </div>
+                            <div class="content">
+                                <div id="chartActivity" class="ct-chart"></div>
+                                <div class="footer">
+                                    <div class="chart-legend">
+                                        <i class="fa fa-circle text-info"></i> Tesla Model S
+                                        <i class="fa fa-circle text-warning"></i> BMW 5 Series
+                                    </div>
+                                    <hr>
+                                    <div class="stats">
+                                        <i class="ti-check"></i> Data information certified
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <?php require './component/footer.php'; ?>
         </div>
     </div>
     <script defer
@@ -176,7 +203,7 @@
         data-cf-beacon='{"rayId":"77013b47dd93f46a","version":"2022.11.3","r":1,"token":"1b7cbb72744b40c580f8633c6b62637e","si":100}'
         crossorigin="anonymous"></script>
 </body>
-
+<script src="./assets/js/new.js"></script>
 <script src="assets/js/jquery.min.js" type="text/javascript"></script>
 <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
 
@@ -192,43 +219,6 @@
 
 <script src="assets/js/demo.js"></script>
 <script src="assets/js/jquery.sharrre.js"></script>
-<script>
-// Facebook Pixel Code Don't Delete
-!(function(f, b, e, v, n, t, s) {
-    if (f.fbq) return;
-    n = f.fbq = function() {
-        n.callMethod ?
-            n.callMethod.apply(n, arguments) :
-            n.queue.push(arguments);
-    };
-    if (!f._fbq) f._fbq = n;
-    n.push = n;
-    n.loaded = !0;
-    n.version = "2.0";
-    n.queue = [];
-    t = b.createElement(e);
-    t.async = !0;
-    t.src = v;
-    s = b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t, s);
-})(
-    window,
-    document,
-    "script",
-    "../../../connect.facebook.net/en_US/fbevents.js"
-);
-
-try {
-    fbq("init", "111649226022273");
-    fbq("track", "PageView");
-} catch (err) {
-    console.log("Facebook Track Error:", err);
-}
-</script>
-<noscript>
-    <img height="1" width="1" style="display: none"
-        src="https://www.facebook.com/tr?id=111649226022273&amp;ev=PageView&amp;noscript=1" />
-</noscript>
 <script type="text/javascript">
 $(document).ready(function() {
     demo.initChartist();
