@@ -30,7 +30,7 @@
                                     <div class="d-flex" style="gap:20px;align-items:center;">
                                         <h4 class="title">Experts List</h4>
                                         <!-- <p class="category">Here is a subtitle for this table</p> -->
-                                        <button type="button" class="btn btn-primary">Add Expert</button>
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addUserModal">Add Expert</button>
                                     </div>
 
                                     <div class="d-flex" style="align-items:center;justify-content:flex-end;">
@@ -60,7 +60,7 @@
                                                 <td>$36,738</td>
                                                 <td>Niger</td>
                                                 <td>Oud-Turnhout</td>
-                                                <td><button type="button" class="btn btn-success"><i
+                                                <td><button type="button" class="btn btn-success" data-toggle="modal" data-target="#editUserModal" tabindex="-1" role="dialog" aria-labelledby="addUserModalLabel"><i
                                                             class="ti-pencil"></i></button>
                                                     <button type="button" class="btn btn-danger"><i
                                                             class="ti-trash"></i></button>
@@ -236,15 +236,126 @@
                     </div>
                 </div>
             </div>
+
             <?php require './component/footer.php';?>
         </div>
     </div>
+
+    <!-- Add User Modal Start -->
+        <div class="modal fade" id="addUserModal" tabindex="-1" role="dialog" aria-labelledby="addUserModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="addUserModalLabel">Add New User</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form id="addUserForm">
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                <input type="text" class="form-control" id="username" placeholder="Enter username">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email address</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter email">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" id="password" placeholder="Password">
+                            </div>
+                            <div class="form-group">
+                                <label for="role">Role</label>
+                                <select class="form-control" id="role">
+                                    <option>User</option>
+                                    <option>Admin</option>
+                                    <option>Manager</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" onclick="addUser()">Add User</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Add User Modal End -->
+
+        <!-- Add user modal 2 for edit -->
+        <div class="modal fade" id="editUserModal" tabindex="-1" role="dialog" aria-labelledby="addUserModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="addUserModalLabel">Add New User</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form id="addUserForm">
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                <input type="text" class="form-control" id="username" placeholder="Enter username">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email address</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter email">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" id="password" placeholder="Password">
+                            </div>
+                            <div class="form-group">
+                                <label for="role">Role</label>
+                                <select class="form-control" id="role">
+                                    <option>User</option>
+                                    <option>Admin</option>
+                                    <option>Manager</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-success" onclick="updateUser()">Update</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End Add user modal 2 for edit -->
+
     <script defer
         src="https://static.cloudflareinsights.com/beacon.min.js/vaafb692b2aea4879b33c060e79fe94621666317369993"
         integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA=="
         data-cf-beacon='{"rayId":"77013b6bbf9f0e0c","version":"2022.11.3","r":1,"token":"1b7cbb72744b40c580f8633c6b62637e","si":100}'
         crossorigin="anonymous"></script>
 </body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Bootstrap 3.3.7 JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script>
+        function addUser() {
+            // Get form values
+            var username = document.getElementById('username').value;
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            var role = document.getElementById('role').value;
+
+            // Here you would typically send this data to your server
+            // For this example, we'll just log it to the console
+            console.log('New User:', { username, email, password, role });
+
+            // Close the modal
+            $('#addUserModal').modal('hide');
+
+            // Clear the form
+            document.getElementById('addUserForm').reset();
+
+            // Show a success message (you can replace this with a more sophisticated notification)
+            alert('User added successfully!');
+        }
+    </script>
 <script src="./assets/js/new.js"></script>
 <script>
 function filterExperts() {
