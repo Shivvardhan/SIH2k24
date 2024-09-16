@@ -67,8 +67,7 @@
                                                 <div class="d-flex" style="gap:20px;align-items:center;">
                                                     <h4 class="title">Candidates List</h4>
                                                     <!-- <p class="category">Here is a subtitle for this table</p> -->
-                                                    <button type="button" class="btn btn-primary">Add Candidate</button>
-                                                </div>
+                                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addCandidateModal">Add Candidate</button>                                                </div>
 
                                                 <div class="d-flex"
                                                     style="align-items:center;justify-content:flex-end;">
@@ -287,6 +286,168 @@
             <?php require './component/footer.php';?>
         </div>
     </div>
+
+   <!-- Add Candidate Modal Start -->
+<div class="modal fade" id="addCandidateModal" tabindex="-1" role="dialog" aria-labelledby="addCandidateModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="addCandidateModalLabel">Add New Candidate</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <form id="addCandidateForm">
+                    <h5>Personal Information</h5>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" class="form-control" id="fullName" placeholder="Enter full name">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="email">Email Address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter email">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="contactNumber">Contact Number</label>
+                            <input type="tel" class="form-control" id="contactNumber" placeholder="Enter contact number">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="dateOfBirth">Date of Birth</label>
+                            <input type="date" class="form-control" id="dateOfBirth">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="currentAddress">Current Address</label>
+                        <textarea class="form-control" id="currentAddress" rows="2" placeholder="Enter current address"></textarea>
+                    </div>
+
+                    <h5>Educational Background</h5>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="highestEducation">Highest Level of Education</label>
+                            <select class="form-control" id="highestEducation">
+                                <option>High School</option>
+                                <option>Associate's Degree</option>
+                                <option>Bachelor's Degree</option>
+                                <option>Master's Degree</option>
+                                <option>Doctorate</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="institution">Name of Institution</label>
+                            <input type="text" class="form-control" id="institution" placeholder="Enter institution name">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="fieldOfStudy">Field of Study/Major</label>
+                            <input type="text" class="form-control" id="fieldOfStudy" placeholder="Enter field of study">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="degreeEarned">Degree/Diploma Earned</label>
+                            <input type="text" class="form-control" id="degreeEarned" placeholder="Enter degree earned">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="graduationDate">Graduation Date</label>
+                            <input type="date" class="form-control" id="graduationDate">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="gpa">GPA/Percentage</label>
+                            <input type="text" class="form-control" id="gpa" placeholder="Enter GPA or percentage">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="relevantCoursework">Relevant Coursework</label>
+                        <textarea class="form-control" id="relevantCoursework" rows="2" placeholder="Enter relevant coursework"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="academicAchievements">Academic Achievements/Honors</label>
+                        <textarea class="form-control" id="academicAchievements" rows="2" placeholder="Enter academic achievements or honors"></textarea>
+                    </div>
+
+                    <h5>Professional Experience</h5>
+                    <div class="form-group">
+                        <label for="workExperience">Work Experience</label>
+                        <textarea class="form-control" id="workExperience" rows="4" placeholder="Enter work experience details"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="achievements">Achievements and Accomplishments</label>
+                        <textarea class="form-control" id="achievements" rows="3" placeholder="Enter achievements and accomplishments"></textarea>
+                    </div>
+
+                    <h5>Skills and Qualifications</h5>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="technicalSkills">Technical Skills</label>
+                            <textarea class="form-control" id="technicalSkills" rows="3" placeholder="Enter technical skills"></textarea>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="softSkills">Soft Skills</label>
+                            <textarea class="form-control" id="softSkills" rows="3" placeholder="Enter soft skills"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="languages">Language Proficiencies</label>
+                        <input type="text" class="form-control" id="languages" placeholder="Enter language proficiencies">
+                    </div>
+                    <div class="form-group">
+                        <label for="certifications">Certifications</label>
+                        <textarea class="form-control" id="certifications" rows="2" placeholder="Enter certifications"></textarea>
+                    </div>
+                    <div class="form-group">
+    <label for="certificationUpload">Upload Certification</label>
+    <input type="file" class="form-control-file" id="certificationUpload">
+</div>
+                    <div class="form-group">
+                        <label for="licenses">Relevant Licenses</label>
+                        <textarea class="form-control" id="licenses" rows="2" placeholder="Enter relevant licenses"></textarea>
+                    </div>
+
+                    <h5>Additional Information</h5>
+                    <div class="form-group">
+                        <label for="reasonForApplying">Reason for Applying</label>
+                        <textarea class="form-control" id="reasonForApplying" rows="2" placeholder="Enter reason for applying"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="careerGoals">Career Goals</label>
+                        <textarea class="form-control" id="careerGoals" rows="2" placeholder="Enter career goals"></textarea>
+                    </div>
+
+                    <h5>Extracurricular Activities</h5>
+                    <div class="form-group">
+                        <label for="volunteerWork">Volunteer Work</label>
+                        <textarea class="form-control" id="volunteerWork" rows="2" placeholder="Enter volunteer work details"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="hobbies">Relevant Hobbies or Interests</label>
+                        <textarea class="form-control" id="hobbies" rows="2" placeholder="Enter relevant hobbies or interests"></textarea>
+                    </div>
+
+                    <h5>Portfolio and Work Samples</h5>
+                    <div class="form-group">
+                        <label for="portfolioLinks">Portfolio Links</label>
+                        <textarea class="form-control" id="portfolioLinks" rows="2" placeholder="Enter links to online portfolios"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="resumeUpload">Upload Resume</label>
+                        <input type="file" class="form-control-file" id="resumeUpload">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="addCandidate()">Add Candidate</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Add Candidate Modal End -->
+ 
     <script defer
         src="https://static.cloudflareinsights.com/beacon.min.js/vaafb692b2aea4879b33c060e79fe94621666317369993"
         integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA=="
