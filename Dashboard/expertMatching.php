@@ -28,17 +28,52 @@
                                 <div class="header">
                                     <h4 class="title">Interview Board Subjects</h4>
                                 </div>
-                                <div class="content">
+                                <div class="content" style="padding-top:0;">
                                     <form action="./matchingResult.php">
-                                        <div class="row">
+                                        <!-- <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <input type="text" class="form-control border-input"
                                                         placeholder="Computer Science Engineering, Electrical Engineering " />
                                                 </div>
                                             </div>
+                                        </div> -->
+                                        <div class="row" style="padding-bottom:10px;">
+                                            <div class="col-md-12 " style="display:ruby;gap:10px;">
+                                                <div class="d-flex" style="align-items:center;gap:5px;">
+                                                    <input type="checkbox" id="cse1" style="margin-top:1px;" />
+                                                    <label for="cse1" style="margin:0;"> Computer Science &
+                                                        Engineering</label>
+                                                </div>
+                                                <div class="d-flex" style="align-items:center;gap:5px;">
+                                                    <input type="checkbox" id="cse2" style="margin-top:1px;" />
+                                                    <label for="cse2" style="margin:0;"> Computer Science &
+                                                        Engineering</label>
+                                                </div>
+
+                                                <div class="d-flex" style="align-items:center;gap:5px;">
+                                                    <input type="checkbox" id="cse3" style="margin-top:1px;" />
+                                                    <label for="cse3" style="margin:0;"> Computer Science &
+                                                        Engineering</label>
+                                                </div>
+                                                <div class="d-flex" style="align-items:center;gap:5px;">
+                                                    <input type="checkbox" id="cse4" style="margin-top:1px;" />
+                                                    <label for="cse4" style="margin:0;"> Computer Science &
+                                                        Engineering</label>
+                                                </div>
+                                                <div class="d-flex" style="align-items:center;gap:5px;">
+                                                    <input type="checkbox" id="cse5" style="margin-top:1px;" />
+                                                    <label for="cse5" style="margin:0;"> Computer Science &
+                                                        Engineering</label>
+                                                </div>
+                                                <div class="d-flex" style="align-items:center;gap:5px;">
+                                                    <input type="checkbox" id="cse6" style="margin-top:1px;" />
+                                                    <label for="cse6" style="margin:0;"> Computer Science &
+                                                        Engineering</label>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="row">
+                                        <div class=" row">
                                             <div class="col-md-4">
                                                 <div class="form-group">
                                                     <label>Interview Venue</label>

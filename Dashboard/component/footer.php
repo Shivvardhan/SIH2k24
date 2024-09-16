@@ -11,8 +11,7 @@
             &copy;
             <script>
             document.write(new Date().getFullYear());
-            </script>
-            , powered by
+            </script>, powered by
             <a href="#">Team Echo</a>
         </div>
     </div>
