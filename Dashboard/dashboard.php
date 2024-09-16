@@ -31,7 +31,7 @@
                                         </div>
                                         <div class="col-xs-9">
                                             <div class="numbers">
-                                                <p>Total Selected Experts</p>
+                                                <p>Total Experts</p>
                                                 05
                                             </div>
                                         </div>
@@ -75,31 +75,6 @@
                                 <div class="content">
                                     <div class="row">
                                         <div class="col-xs-3">
-                                            <div class="icon-big icon-danger text-center">
-                                                <i class="ti-comment-alt"></i>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-9">
-                                            <div class="numbers">
-                                                <p>Total Feedbacks</p>
-                                                23
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="footer">
-                                        <hr />
-                                        <div class="stats">
-                                            <i class="ti-timer"></i> In the last hour
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6" style="padding-left:10px;padding-right:0px;">
-                            <div class="card">
-                                <div class="content">
-                                    <div class="row">
-                                        <div class="col-xs-3">
                                             <div class="icon-big icon-info text-center">
                                                 <i class="ti-id-badge"></i>
                                             </div>
@@ -115,6 +90,31 @@
                                         <hr />
                                         <div class="stats">
                                             <i class="ti-reload"></i> Updated now
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6" style="padding-left:10px;padding-right:0px;">
+                            <div class="card">
+                                <div class="content">
+                                    <div class="row">
+                                        <div class="col-xs-3">
+                                            <div class="icon-big icon-danger text-center">
+                                                <i class="ti-comment-alt"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-9">
+                                            <div class="numbers">
+                                                <p>Total Feedbacks</p>
+                                                23
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="footer">
+                                        <hr />
+                                        <div class="stats">
+                                            <i class="ti-timer"></i> In the last hour
                                         </div>
                                     </div>
                                 </div>
